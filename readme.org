@@ -1,0 +1,47 @@
+#+Title: Copier template for mass booklets for the roman rite.
+
+This repository contains a [[https://github.com/copier-org/copier][copier]] template for generating LaTeX booklets with
+chant in gregorio for the roman rite.  It is used for generating booklets I
+happen to need, chiefly for [[https://github.com/copier-org/copier][St Joseph's Gateshead]].
+
+* Why copier?
+
+Copier is not (yet) as popular as cookiecutter, but has a number of advantages:
+
+- versioned templates
+- updating generated projects as templates develop
+- slightly saner defaults (copy without render on by default)
+- yaml config ;)
+
+Chief among these is the updating: when you spot an error in one booklet you can
+fix it in the template and then apply it to *all* subdirectories.
+
+This, however, changes the workflow a bit:
+
+- Every subproject (directory) needs its own ~.copier_answers.yml~ file, which
+  annoyingly cannot be stored within a generated directory (at least as far as I
+  can see)
+  
+  -> Thus you have to make the directory for the mass /manually/.
+
+- ~copier copy~ will then populate this directory with the files needed to generate a
+  particular booklet.
+
+- ~copier update subproject~ will then update ~subproject~ if necessary, by
+  comparing the /semVer tag/ of the template against the last tag used in the
+  project.
+
+* Example workflow
+#+begin_src bash
+  cd /path/to/repo
+  mkdir new-mass # do pick a good name...
+  copier copy gh:2e0byo/RomanRiteTemplate.git new-mass
+  # later...
+  copier update new-mass
+#+end_src
+
+* License
+
+The code here is GPL.  But the texts are either copyright (if noted) or public
+domain.
+
