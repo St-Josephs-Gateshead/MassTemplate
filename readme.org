@@ -31,6 +31,10 @@ This, however, changes the workflow a bit:
   comparing the /semVer tag/ of the template against the last tag used in the
   project.
 
+  If there are changes to a file you have edited it will simply clobber them.
+  You can then inspect the changes with git + your standard workflow and check
+  in what is worth keeping.
+
 * Example workflow
 #+begin_src bash
   cd /path/to/repo
