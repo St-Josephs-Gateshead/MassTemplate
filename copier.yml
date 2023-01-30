@@ -38,6 +38,23 @@ _creedp:
   type: bool
   help: Include creed?
 
+preface:
+  type: str
+  help: Which preface should be used?
+  choices:
+    - simple
+    - standard
+    - solemn
+  default: standard
+
+alleluia:
+  type: str
+  help: Alleluia or Tract?
+  choices:
+    - alleluia
+    - tract
+  default: alleluia
+
 creed:
   type: int
   help: Which of the 4 standard creeds to use?
