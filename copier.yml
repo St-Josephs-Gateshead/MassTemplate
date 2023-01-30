@@ -1,0 +1,81 @@
+feast_name:
+  type: str
+  help: Name of feast or feria
+
+mass_type:
+  type: str
+  help: >
+    Description of Mass for booklet cover: e.g. "Missa Cantata"
+
+# feast_slug:
+#   type: str
+#   help: Machine-friendly name to use for files
+#   default: "{{ feast_name | slugify }}"
+
+creator_name:
+  type: str
+  help: Your name! (Added to the credits in the booklet.)
+
+asperges:
+  type: bool
+  help: Include asperges?
+
+# this isn't a bad idea: use it to derive other vars.
+# solemnity:
+#   type: str
+#   help: A fudged 'degree of solemnity' for the feast.  You may still need to edit things.
+#   choices:
+#     - penitential
+#     - standard
+#     - solemn
+#     - very solemn
+
+gloria:
+  type: bool
+  help: Include gloria?
+
+_creedp:
+  type: bool
+  help: Include creed?
+
+creed:
+  type: int
+  help: Which of the 4 standard creeds to use?
+  when: "{{ _creedp }}"
+
+creed_path:
+  type: str
+  help: >
+    Relative path from generated directory to the directory containing the creeds.
+    You might like to use StJosephsGateshead/Ordinaries for this.
+  default: ../Ordinaries/credo
+
+mass_setting:
+  type: int
+  help: which of the 16 standard mass ordinaries to use?
+
+masses_path:
+  type: str
+  help: >
+    Relative path from generated directory to the directory containing the mass ordinaries.
+    You might like to use StJosephsGateshead/Ordinaries for this.
+  default: ../Ordinaries/masses
+
+repo_url:
+  type: str
+  help: Url for repository, if any.  Leave blank to suppress.
+
+marian:
+  type: bool
+  help: Include Marian Antiphon?
+
+img_file:
+  type: str
+  help: Relative path from generated directory to logo.
+  default: ../img/logo.png
+
+
+# _jinja_extensions:
+#   - cookiecutter.extensions.SlugifyExtension
+
+_subdirectory: template

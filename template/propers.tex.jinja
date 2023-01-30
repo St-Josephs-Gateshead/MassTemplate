@@ -1,0 +1,41 @@
+% This file defines the propert to be inserted into missalette.tex  In this way
+% multiple feasts can be typeset very quickly.  missalette.tex should not normally
+% need changing.  Note that this is not the most readable way to insert text
+% into a LaTeX document, but it is the most powerful: the macros defined here
+% are directly excecuted when building the document.
+
+% For the title page
+\newcommand{\feast}{ {{-feast_name-}} }
+\newcommand{\masstype}{ {{mass_type}} }
+% {% raw %}
+\newcommand{\introittranslation}{}
+\newcommand{\collect}{%
+  \l{}
+  \e{}
+}
+\newcommand{\lessontranslation}{}
+\newcommand{\gradualtranslation}{}
+\newcommand{\gospel}{%
+  \l{}
+  \e{}
+}
+\newcommand{\offertorytranslation}{}
+\newcommand{\communiontranslation}{}
+\newcommand{\postcommunion}{%
+  \l{}
+  \e{}
+}
+
+% {% endraw %}
+% File paths: we don't use symlinks as (a) not all platforms support them, and
+% (b) they don't fit nicely with the flow we're using.
+
+\newcommand{\kyrie-path}{ {{masses_path}}/{{mass_setting}}/kyrie }
+\newcommand{\gloria-path}{ {{masses_path}}/{{mass_setting}}/gloria }
+\newcommand{\sanctus-path}{ {{masses_path}}/{{mass_setting}}/sanctus }
+\newcommand{\agnus-path}{ {{masses_path}}/{{mass_setting}}/agnus }
+\newcommand{\ite-path}{ {{masses_path}}/{{mass_setting}}/ite }
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "missalette"
+%%% End:
