@@ -37,7 +37,7 @@
 \setparaheadstyle{\color{red}\large\raggedright\centering}
 \setafterparaskip{1.5ex plus .2ex}
 % multicols
-\renewcommand{\columnseprulecolor}{\color{red]]
+\renewcommand{\columnseprulecolor}{\color{red}}
 \setlength{\multicolsep}{0em}
 \setlength{\columnseprule}{0.4pt}
 \colseprulecolor{red}
@@ -51,17 +51,17 @@
   \raggedbottom
   \afterpage{%
     \global\let\@textbottom\mytextbottom
-    \global\let\@texttop\mytexttop]]
+    \global\let\@texttop\mytexttop}}
 \makeatother
-\renewcommand{\X}{\textcolor{red}{\grecross]]
-\renewcommand{\r}{\textcolor{red}{\gothRbar.]]
-\renewcommand{\v}{\textcolor{red}{\gothVbar.]]
+\renewcommand{\X}{\textcolor{red}{\grecross}}
+\renewcommand{\r}{\textcolor{red}{\gothRbar.}}
+\renewcommand{\v}{\textcolor{red}{\gothVbar.}}
 
 \newcommand{\ps}[2][]{%typeset `psalmus'
-  \paragraph{Psalmus #2#1]]
+  \paragraph{Psalmus #2#1}}
 
 \newcommand{\dropcap}[2]{%
-  \lettrine{\textcolor{red}{#1]]{#2]]
+  \lettrine{\textcolor{red}{#1}}{#2}}
 
 \renewcommand{\red}[2][\centering]{%do the red....
   % call with empty optional argument for justified text; or
@@ -80,32 +80,32 @@
   \medskip
 }
 
-\renewcommand{\X}{\textcolor{red}{\grecross]]
+\renewcommand{\X}{\textcolor{red}{\grecross}}
 
 \renewcommand{\l}[2][]{\selectlanguage{latin}
-  \ifthenelse{\equal{s}{#1]]%
+  \ifthenelse{\equal{s}{#1}}%
   {\emph{S.}~}%
   {}%
-  \ifthenelse{\equal{m}{#1]]%
+  \ifthenelse{\equal{m}{#1}}%
   {\emph{M.}~}%
   {}%
   #2\par\selectlanguage{british}\switchcolumn}
 \newcommand{\e}[2][]{%
-  \ifthenelse{\equal{s}{#1]]%
+  \ifthenelse{\equal{s}{#1}}%
   {\emph{P.}~}%
   {}%
-  \ifthenelse{\equal{m}{#1]]%
+  \ifthenelse{\equal{m}{#1}}%
   {\emph{S.}~}%
   {}%
   #2\par\switchcolumn*}
 \renewcommand{\S}{\emph{S.}~}
 \newcommand{\M}{\emph{M.}~}
-\newcommand{\amen}{\l{Amen.}\e{Amen.]]
+\newcommand{\amen}{\l{Amen.}\e{Amen.}}
 \newcommand{\dominusvobiscum}{%
   \l[s]{Dóminus vobíscum.}
   \e[s]{The Lord be with you.}
   \l[m]{Et cum spíritu tuo.}
-  \e[m]{And with thy spirit.]]
+  \e[m]{And with thy spirit.}}
 \newcommand{\oremus}{
   \l{Orémus.}
   \e{Let us pray.}
@@ -125,13 +125,13 @@
   \e{Through Jesus Christ, thy Son our Lord, Who liveth and reigneth with thee, in the unity of the Holy Ghost, God, world without end.}
 }
 \newcommand{\onecolumntranslation}[1]{%
-  {\small #1]]
+  {\small #1}}
 
 \newcommand{\threecolumntranslation}[1]{%
   \begin{multicols}{3}
     \small
     #1
-  \end{multicols]]
+  \end{multicols}}
 
 
 % modified from https://tex.stackexchange.com/questions/163334/using-lettrine-or-equivalent-inside-verse-environment
@@ -143,19 +143,19 @@
     \if Q\versalletter\def\descstrut{\strut}\else\def\descstrut{}\fi%
     \def\Versal{\textcolor{red}{%
         \scalerel*{$\fontsize{28}{30}\selectfont\versalletter$}%
-        {\def\stacktype{L}\stackon{T\descstrut}{T]]]]%
+        {\def\stacktype{L}\stackon{T\descstrut}{T}}}}%
     \setbox0=\hbox{\Versal\,}%
     \def\leftoffset{-.5\wd0}%
     \hspace*{\wd0}\hspace{\leftoffset}%
     \verselineA\\%
     \hspace*{\wd0}\hspace{\leftoffset}%
-    \llap{\smash{\box0]]%
+    \llap{\smash{\box0}}%
     \hspace{0.5em}\verselineB\strut%
   \end{minipage}\\%
 }
 
 
-\def\firstline#1#2 #3\relax{\def\versalletter{#1}\def\verselineA{\textsc{#2} #3]]
+\def\firstline#1#2 #3\relax{\def\versalletter{#1}\def\verselineA{\textsc{#2} #3}}
 
 % [% endraw %]
 \begin{document}
