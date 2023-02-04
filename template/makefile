@@ -1,12 +1,20 @@
 .PHONY: all gabc
 
-all: missalette.pdf missalette-booklet.pdf
+all: missalette-booklet.pdf pew-sheet-booklet.pdf
 
-missalette.pdf: missalette.tex propers.tex gabc
-	env openout_any=a latexmk --pdflatex=lualatex --pdf missalette.tex
+%.pdf: %.tex
+	env openout_any=a latexmk --pdflatex=lualatex --pdf $<
+
+%-booklet.pdf: %.pdf
+	pdfjam --landscape --suffix booklet --booklet true $<
+
+missalette.pdf: missalette.tex propers.tex styling.sty rubrics.sty titlepage.sty
 
 missalette-booklet.pdf: missalette.pdf
-	pdfjam --landscape --suffix booklet --booklet true  missalette.pdf
+
+pew-sheet.pdf: pew-sheet.tex propers.tex styling.sty rubrics.sty
+
+pew-sheet-booklet.pdf: pew-sheet.pdf
 
 
 clean:

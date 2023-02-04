@@ -1,3 +1,11 @@
+rite:
+  type: str
+  help: Which rite is this Mass in?
+  choices:
+    - dominican
+    - roman
+  default: roman
+
 feast_name:
   type: str
   help: Name of feast or feria
@@ -6,11 +14,6 @@ mass_type:
   type: str
   help: >
     Description of Mass for booklet cover: e.g. "Missa Cantata"
-
-# feast_slug:
-#   type: str
-#   help: Machine-friendly name to use for files
-#   default: "{{ feast_name | slugify }}"
 
 creator_name:
   type: str
@@ -57,7 +60,7 @@ alleluia:
 
 creed:
   type: int
-  help: Which of the 4 standard creeds to use?
+  help: Which of the 4 (or 3) standard creeds to use?
   when: "{{ _creedp }}"
 
 creed_path:
@@ -69,7 +72,7 @@ creed_path:
 
 mass_setting:
   type: int
-  help: which of the 16 standard mass ordinaries to use?
+  help: which of the 16 (or 8) standard mass ordinaries to use?
 
 masses_path:
   type: str
@@ -90,10 +93,6 @@ img_file:
   type: str
   help: Relative path from generated directory to logo.
   default: ../img/logo.png
-
- 
-# _jinja_extensions:
-#   - cookiecutter.extensions.SlugifyExtension
 
 _subdirectory: template
 

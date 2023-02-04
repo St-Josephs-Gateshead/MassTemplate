@@ -1,6 +1,6 @@
-% styling commands for liturgy booklets
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{styling}
+\ProvidesPackage{titlepage}
+
 \RequirePackage[autocompile]{gregoriotex} 
 % titlepage
 \newlength{\TPpreseriesskip}      %skip before series heading
@@ -10,16 +10,15 @@
 \newlength{\TPpresubtitleskip}      %skip before subtitle
 \setlength{\TPpresubtitleskip}{1.5\baselineskip}
 
-
-\newcommand{\TitlePage}[3]{
+\newcommand{\titlePage}[4]{
   % typeset the title page for liturgy booklets
-  % First argument is title, second subtitle, third series heading
+  % First argument is title, second subtitle, third series heading, fourth image file
   \thispagestyle{empty}
   \frontmatter
   {  ~\vspace{\TPpreseriesskip}
-    
+
     {\noindent\huge #1}\centering
-    
+
     \noindent\greseparator{2}{10}
 
     \vspace{\TPpretitleskip}
@@ -32,13 +31,10 @@
 
     \vfill
 
-    \noindent\includegraphics[width=0.4\linewidth]{ [[img_file]] }\centering
+    \noindent\includegraphics[width=0.4\linewidth]{#4}\centering
 
-%%         {\LARGE\noindent\textsc{Officium Divinum}}
 
-      \cleardoublepage
-      \pagenumbering{arabic}
+    \cleardoublepage
+    \pagenumbering{arabic}
 
   }}
-
-

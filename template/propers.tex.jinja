@@ -6,10 +6,22 @@
 
 % For the title page
 \newcommand{\feast}{ [[-feast_name-]] }
-\newcommand{\masstype}{ [[mass_type]] }
-% [% raw %]
-\newcommand{\introittranslation}{%
+\newcommand{\masstype}{ [[mass_type]]%
+  % [% if rite == 'dominican' %]
+  Iuxta Ritum Dominicanum%
+  % [% endif %]%
 }
+% [% if rite == 'dominican' %]
+\newcommand{\office}{%
+}
+\newcommand{\officeTranslation}{%
+}
+% [% else %]
+\newcommand{\introit}{%
+}
+\newcommand{\introitTranslation}{%
+}
+% [% endif %]
 \newcommand{\collect}{%
   \l{%
   }
@@ -22,17 +34,37 @@
   \e{%
   }
 }
-\newcommand{\gradualtranslation}{%
+
+% [% if rite == 'dominican' %]
+\newcommand{\responsory}{%
 }
+\newcommand{\responsoryTranslation}{%
+}
+% [% else %]
+\newcommand{\gradual}{%
+}
+\newcommand{\gradualTranslation}{%
+}
+% [% endif %]
 \newcommand{\gospel}{%
   \l{%
   }
   \e{%
   }
 }
-\newcommand{\offertorytranslation}{%
+\newcommand{\offertory}{%
 }
-\newcommand{\communiontranslation}{%
+\newcommand{\offertoryTranslation}{%
+}
+\newcommand{\secret}{%
+  \l{%
+  }
+  \e{%
+  }
+}
+\newcommand{\communion}{%
+}
+\newcommand{\communionTranslation}{%
 }
 \newcommand{\postcommunion}{%
   \l{%
@@ -41,7 +73,6 @@
   }
 }
 
-% [% endraw %]
 % File paths: we don't use symlinks as (a) not all platforms support them, and
 % (b) they don't fit nicely with the flow we're using.
 
