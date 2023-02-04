@@ -1,8 +1,8 @@
-#+Title: Copier template for mass booklets for the roman rite.
+#+Title: Copier template for mass booklets for the roman and dominican rites.
 
 This repository contains a [[https://github.com/copier-org/copier][copier]] template for generating LaTeX booklets with
-chant in gregorio for the roman rite.  It is used for generating booklets I
-happen to need, chiefly for [[https://github.com/St-Josephs-Gateshead][St Joseph's Gateshead]].
+chant in gregorio for the roman (tridentine) and dominican rites.  It is used for generating booklets I
+happen to need, chiefly for [[https://github.com/St-Josephs-Gateshead][St Joseph's Gateshead]] and  [[https://github.com/2e0byo/StCuthbertsMasses][St Cuthbert's Durham]].
 
 * Why copier?
 
@@ -39,7 +39,7 @@ This, however, changes the workflow a bit:
 #+begin_src bash
   cd /path/to/repo
   mkdir new-mass # do pick a good name...
-  copier copy gh:2e0byo/RomanRiteTemplate.git new-mass
+  copier copy gh:2e0byo/MassTemplate.git new-mass
   # later...
   copier update new-mass
 #+end_src
