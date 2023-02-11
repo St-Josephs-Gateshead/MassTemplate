@@ -37,7 +37,7 @@ gloria:
   type: bool
   help: Include gloria?
 
-_creedp:
+creedp:
   type: bool
   help: Include creed?
 
@@ -61,7 +61,7 @@ alleluia:
 creed:
   type: int
   help: Which of the 4 (or 3) standard creeds to use?
-  when: "{{ _creedp }}"
+  when: "{{ creedp }}"
 
 creed_path:
   type: str
