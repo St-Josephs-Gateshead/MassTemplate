@@ -94,6 +94,11 @@ img_file:
   help: Relative path from generated directory to logo.
   default: ../img/logo.png
 
+version:
+  type: str
+  help: Version of the document (semVer compatible str, e.g. v1.0.0)
+  default: v1.0.0
+
 _subdirectory: template
 
 _envops:
