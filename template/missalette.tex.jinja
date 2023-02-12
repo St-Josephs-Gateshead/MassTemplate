@@ -42,14 +42,49 @@
 
 \titlePage{Sacra Missa}{\masstype}{\feast}{[[-img_file-]]}
 
+% [% if asperges %]
+\section{Asperges}
+\red{When the celebrant reaches the altar:}
+\gregorioscore{asperges}
+\black{
+  \l{\v\ Osténde nobis, Dómine, misericórdiam tuam.}
+  \e{\v\ O Lord, show Thy mercy upon us.}
+  \l{\r\ Et salutáre tuum da nobis.}
+  \e{\r\ And grant us Thy salvation.}
+  \domineexaudi
+  \dominusvobiscum
+  \oremus
+  \l{%
+    Exáudi nos, Dómine sancte, Pater omnípotens, ætérne Deus, et míttere
+    dignéris sanctum Angelum tuum de cælis, qui custódiat, fóveat, prótegat,
+    vísitet atque deféndat omnes habitántes in hoc habitáculo. Per Christum
+    Dóminum nostrum.
+  }
+  \e{%
+    Hear us, O holy Lord, almighty Father, everlasting God, and vouchsafe to
+    send Thy holy Angel from heaven, to guard, cherish, protect, visit and
+    defend all that are assembled in this place: through Christ our Lord.
+  }
+  \amen
+}
+% [% endif %]
+
 % [% if rite == 'dominican' %]
 \section{Officium}
+% [% if asperges %]
+\red{Immediately after the Asperges}
+% [% else %]
 \red{When the celebrant reaches the altar:}
+% [% endif %]
 \gregorioscore{office}
 \oneColumnTranslation{\officeTranslation}
 % [% else %]
 \section{Introit}
+% [% if asperges %]
+\red{Immediately after the Asperges}
+% [% else %]
 \red{When the celebrant reaches the altar:}
+% [% endif %]
 \gregorioscore{introit}
 \oneColumnTranslation{\introitTranslation}
 % [% endif %]
