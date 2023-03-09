@@ -52,10 +52,11 @@ preface:
 
 alleluia:
   type: str
-  help: Alleluia or Tract?
+  help: Alleluia, Tract or none?
   choices:
-    - alleluia
-    - tract
+    alleluia: null
+    tract: null
+    none: ""
   default: alleluia
 
 creed:
