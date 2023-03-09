@@ -61,7 +61,7 @@ alleluia:
 creed:
   type: int
   help: Which of the 4 (or 3) standard creeds to use?
-  when: "{{ creedp }}"
+  when: "[[ creedp ]]"
 
 creed_path:
   type: str
@@ -69,6 +69,7 @@ creed_path:
     Relative path from generated directory to the directory containing the creeds.
     You might like to use StJosephsGateshead/Ordinaries for this.
   default: ../Ordinaries/credo
+  when: "[[ creedp ]]"
 
 mass_setting:
   type: int
