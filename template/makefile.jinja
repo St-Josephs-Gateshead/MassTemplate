@@ -1,0 +1,74 @@
+.PHONY: all
+GTEX?=
+MARIAN?=
+
+all: missalette-booklet.pdf pew-sheet-booklet.pdf
+
+%.pdf: %.tex
+	env openout_any=a latexmk --pdflatex=lualatex --pdf $<
+
+%.gtex: %.gabc
+	openout_any=a gregorio $< -o $@
+
+%-booklet.pdf: %.pdf
+	pdfjam --landscape --suffix booklet --booklet true $<
+
+[% for fn in ["amen", "dominus-vobiscum", "pax-domini", "preface", "sed-libera-nos", "sequenti", "introit", "gradual", "offertory", "communion"] %]
+[[fn]].gtex: [[fn]].gabc
+
+GTEX += [[fn]].gtex
+[% endfor %]
+
+[% for fn in ["kyrie", "sanctus", "agnus", "ite"] %]
+[[masses_path]]/[[mass_setting]]/[[fn]].gtex: [[masses_path]]/[[mass_setting]]/[[fn]].gabc
+
+GTEX += [[masses_path]]/[[mass_setting]]/[[fn]].gtex
+[% endfor %]
+[% if creedp %]
+[[creed_path]]/[[creed]]/credo.gtex: [[creed_path]]/[[creed]]/credo.gabc
+
+GTEX += [[creed_path]]/[[creed]]/credo.gtex
+[% endif %]
+
+[% if asperges %]
+asperges.gtex: asperges.gabc
+
+GTEX += asperges.gtex
+[% endif %]
+[% if gloria %]
+[[masses_path]]/[[mass_setting]]/gloria.gtex: [[masses_path]]/[[mass_setting]]/gloria.gabc
+
+GTEX += [[masses_path]]/[[mass_setting]]/gloria.gtex:
+[% endif %]
+[% if alleluia == "alleluia" %]
+alleluia.gtex: alleluia.gabc
+
+GTEX += alleluia.gtex
+[% endif %]
+[% if alleluia == "tract" %]
+tract.gtex: tract.gabc
+
+GTEX += tract.gtex
+[% endif %]
+[% if marian %]
+marian.gtex: marian.gabc
+
+MARIAN_GTEX += marian.gtex
+[% endif %]
+
+missalette.pdf: missalette.tex propers.tex styling.sty rubrics.sty titlepage.sty ${GTEX} ${MARIAN}
+
+missalette-booklet.pdf: missalette.pdf
+
+pew-sheet.pdf: pew-sheet.tex propers.tex styling.sty rubrics.sty ${MARIAN}
+
+pew-sheet-booklet.pdf: pew-sheet.pdf
+
+
+clean:
+	find . -maxdepth 1 -name '*latexmk' -delete
+	find . -maxdepth 1 -name '*.gtex' -delete
+	find . -maxdepth 1 -name '*.fls' -delete
+	find . -maxdepth 1 -name '*.log' -delete
+	find . -maxdepth 1 -name '*.aux' -delete
+	find . -maxdepth 1 -name '*.gaux' -delete
