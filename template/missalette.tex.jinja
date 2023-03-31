@@ -112,21 +112,18 @@
 
 % [% if rite == 'dominican' %]
 \section{Responsory}
-\red{After the Chanting of the lesson, or during the (secret) reading if
-  so appointed:}
-\gregorioscore{responsory}
-% [% if alleluia %]
-\gregorioscore{[[ alleluia ]]}
-% [% endif %]
-\oneColumnTranslation{\responsoryTranslation}
 % [% else %]
 \section{Gradual}
+% [% endif %]
 \red{After the Chanting of the lesson, or during the (secret) reading if
   so appointed:}
 \gregorioscore{gradual}
 % [% if alleluia %]
 \gregorioscore{[[ alleluia ]]}
 % [% endif %]
+% [% if rite == 'dominican' %]
+\oneColumnTranslation{\responsoryTranslation}
+% [% else %]
 \oneColumnTranslation{\gradualTranslation}
 % [% endif %]
 
