@@ -59,6 +59,10 @@ alleluia:
     none: ""
   default: alleluia
 
+gradual:
+  type: bool
+  help: Include gradual?
+
 creed:
   type: int
   help: Which of the 4 (or 3) standard creeds to use?

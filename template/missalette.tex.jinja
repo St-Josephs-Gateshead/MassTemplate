@@ -110,6 +110,7 @@
 \red{The lesson is chanted:}
 \black{\lesson}
 
+% [% if gradual %]
 % [% if rite == 'dominican' %]
 \section{Responsory}
 % [% else %]
@@ -118,6 +119,9 @@
 \red{After the Chanting of the lesson, or during the (secret) reading if
   so appointed:}
 \gregorioscore{gradual}
+% [% else %]
+\section{Alleluia}
+% [% endif %]
 % [% if alleluia %]
 \gregorioscore{[[ alleluia ]]}
 % [% endif %]
