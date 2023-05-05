@@ -13,7 +13,7 @@ all: missalette-booklet.pdf pew-sheet-booklet.pdf
 %-booklet.pdf: %.pdf
 	pdfjam --landscape --suffix booklet --booklet true $<
 
-[% for fn in ["amen", "dominus-vobiscum", "pax-domini", "preface", "sed-libera-nos", "sequenti", "introit", "gradual", "offertory", "communion"] %]
+[% for fn in ["amen", "dominus-vobiscum", "pax-domini", "preface", "sed-libera-nos", "sequenti", "introit", "offertory", "communion"] %]
 [[fn]].gtex: [[fn]].gabc
 
 GTEX += [[fn]].gtex
@@ -38,8 +38,12 @@ GTEX += asperges.gtex
 [% if gloria %]
 [[masses_path]]/[[mass_setting]]/gloria.gtex: [[masses_path]]/[[mass_setting]]/gloria.gabc
 
-GTEX += [[masses_path]]/[[mass_setting]]/gloria.gtex:
+GTEX += [[masses_path]]/[[mass_setting]]/gloria.gtex
 [% endif %]
+[% if gradual %]
+gradual.gtex: gradual.gabc
+
+GTEX += gradual.gtex
 [% if alleluia == "alleluia" %]
 alleluia.gtex: alleluia.gabc
 
