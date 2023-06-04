@@ -20,8 +20,12 @@ creator_name:
   help: Your name! (Added to the credits in the booklet.)
 
 asperges:
-  type: bool
+  type: str
   help: Include asperges?
+  choices:
+    No: ""
+    Asperges: "asperges"
+    Vidi Aquam: "vidi-aquam"
 
 # this isn't a bad idea: use it to derive other vars.
 # solemnity:
