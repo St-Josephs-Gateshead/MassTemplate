@@ -103,7 +103,7 @@ marian:
 img_file:
   type: str
   help: Relative path from generated directory to logo.
-  default: ../img/logo.png
+  default: ../img/logo.pdf
 
 version:
   type: str
