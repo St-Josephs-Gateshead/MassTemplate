@@ -68,6 +68,11 @@ gradual:
   help: Include gradual?
   default: true
 
+sequentia:
+  type: bool
+  help: Has sequence?
+  default: false
+
 creed:
   type: int
   help: Which of the 4 (or 3) standard creeds to use?
