@@ -45,7 +45,7 @@
 % [% if asperges %]
 \section{Asperges}
 \red{When the celebrant reaches the altar:}
-\gregorioscore{asperges}
+\gregorioscore{\aspergesPath}
 \black{
   \l{\v\ Osténde nobis, Dómine, misericórdiam tuam. [% if asperges == 'vidi-aquam' %]Alleluia[% endif %] }
   \e{\v\ O Lord, show Thy mercy upon us.[% if asperges == 'vidi-aquam' %]Alleluia[% endif %] }
@@ -100,11 +100,11 @@
 % [% endif %]
 
 \section{Collect}
-\gregorioscore{dominus-vobiscum}
+\gregorioscore{\dominusVobiscumPath}
 \black{
   \oremus
   \collect}
-\gregorioscore{amen}
+\gregorioscore{\amenPath}
 
 \section{Lesson}
 \red{The lesson is chanted:}
@@ -138,8 +138,8 @@
 
 \section{Gospel}
 \red{The choir sings the responses at the Holy Gospel:}
-\gregorioscore{dominus-vobiscum}
-\gregorioscore{sequenti}
+\gregorioscore{\dominusVobiscumPath}
+\gregorioscore{\sequentiPath}
 \black{\gospel}
 
 % [% if creedp %]
@@ -150,7 +150,7 @@
 
 \section{Response prior to the Offertory}
 \red{Just before the chanting of the Offertory:}
-\gregorioscore{dominus-vobiscum}
+\gregorioscore{\dominusVobiscumPath}
 
 \section{Offertory}
 \red{Immediately after the Celebrant chants the previous “Oremus”:}
@@ -163,28 +163,28 @@
 \black{\secret}
 
 \section{Responses at the Preface}
-\gregorioscore{preface}
+\gregorioscore{\prefacePath}
 
 \section{Sanctus and Benedictus}
 \red{Immediately after the Celebrant concludes the chanting of the Preface:}
 \gregorioscore{\sanctusPath}
 
 \section{Amen at the end of the Canon of the Mass}
-\gregorioscore{amen}
+\gregorioscore{\amenPath}
 
 \section{Pater Noster}
 \red{The Celebrant alone chants the “Pater Noster.” The Choir sings the conclusion:}
-\gregorioscore{sed-libera-nos}
+\gregorioscore{\sedLiberaNosPath}
 
 \section{Breaking of the Host}
-\gregorioscore{amen}
-\gregorioscore{dominus-vobiscum}
+\gregorioscore{\amenPath}
+\gregorioscore{\dominusVobiscumPath}
 
 
 \section{Agnus Dei}
 \red{After the proceeding ``Et cum spiritu tuo:''}
-\gregorioscore{amen}
-\gregorioscore{pax-domini}
+\gregorioscore{\amenPath}
+\gregorioscore{\paxDominiPath}
 \gregorioscore{\agnusPath}
 
 \section{Communion}
@@ -195,21 +195,22 @@
 \red{A motet or hymn may be sung here.}
 
 \section{Post-Communion Collect}
-\gregorioscore{dominus-vobiscum}
+\gregorioscore{\dominusVobiscumPath}
 \black{
   \oremus
   \postcommunion
 }
-\gregorioscore{amen}
+\gregorioscore{\amenPath}
 
 \section{Dismissal}
-\gregorioscore{dominus-vobiscum}
+\gregorioscore{\dominusVobiscumPath}
 \gregorioscore{\itePath}
 
 % [% if marian %]
 \section{Marian Antiphon}
 \red{At the conclusion of Mass the Marian antiphon proper to the season is sung:}
-\gregorioscore{marian}
+\gregorioscore{\marianPath}
+\black{\marianResp}
 % [% endif %]
 
 \red{A motet or hymn may follow.}

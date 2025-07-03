@@ -82,14 +82,19 @@
 % File paths: we don't use symlinks as (a) not all platforms support them, and
 % (b) they don't fit nicely with the flow we're using.
 
-\newcommand{\kyriePath}{[[masses_path]]/[[mass_setting]]/kyrie}
-\newcommand{\gloriaPath}{[[masses_path]]/[[mass_setting]]/gloria}
-\newcommand{\sanctusPath}{[[masses_path]]/[[mass_setting]]/sanctus}
-\newcommand{\agnusPath}{[[masses_path]]/[[mass_setting]]/agnus}
-\newcommand{\itePath}{[[masses_path]]/[[mass_setting]]/ite}
-% [% if creedp %]
+[% for fn in ["kyrie", "gloria", "sanctus", "agnus", "ite"] if fn %]
+\newcommand{\[[fn]]Path}{[[masses_path]]/[[mass_setting]]/[[fn]]}
+[% endfor %]
+[% if creedp %]
 \newcommand{\creedPath}{[[creed_path]]/[[creed]]/credo}
-% [% endif %]
+[% endif %]
+[% for fn in ["amen", asperges, "dominus-vobiscum", "pax-domini", "preface_" ~ preface, "sed-libera-nos", "sequenti"] if fn %]
+\newcommand{\[[fn.split('_')[0]|title|replace('-', '')|replace(fn[0].upper(), fn[0])]]Path}{[[common_tones_path]]/[[rite]]/[[fn]]}
+[% endfor %]
+[% if marian %]
+\newcommand{\marianPath}{[[marian_path]]/[[rite]]/[[marian_type]]}
+\include{[[marian_path]]/[[marian_type]]_resp}
+[% endif %]
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "missalette"

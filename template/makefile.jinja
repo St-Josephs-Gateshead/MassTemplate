@@ -13,52 +13,30 @@ all: missalette-booklet.pdf pew-sheet-booklet.pdf
 %-booklet.pdf: %.pdf
 	pdfjam --landscape --suffix booklet --booklet true $<
 
-[% for fn in ["amen", "dominus-vobiscum", "pax-domini", "preface", "sed-libera-nos", "sequenti", "introit", "offertory", "communion"] %]
+[% for fn in ["introit", "gradual" if gradual, alleluia, "sequentia" if sequentia, "offertory", "communion"] if fn %]
 [[fn]].gtex: [[fn]].gabc
-
 GTEX += [[fn]].gtex
 [% endfor %]
 
-[% for fn in ["kyrie", "sanctus", "agnus", "ite"] %]
+[% for fn in ["kyrie", "gloria" if gloria, "sanctus", "agnus", "ite"] if fn %]
 [[masses_path]]/[[mass_setting]]/[[fn]].gtex: [[masses_path]]/[[mass_setting]]/[[fn]].gabc
-
 GTEX += [[masses_path]]/[[mass_setting]]/[[fn]].gtex
 [% endfor %]
+
 [% if creedp %]
 [[creed_path]]/[[creed]]/credo.gtex: [[creed_path]]/[[creed]]/credo.gabc
-
 GTEX += [[creed_path]]/[[creed]]/credo.gtex
 [% endif %]
 
-[% if asperges %]
-asperges.gtex: asperges.gabc
+[% for fn in ["amen", asperges, "dominus-vobiscum", "pax-domini", "preface_" ~ preface, "sed-libera-nos", "sequenti"] if fn %]
+[[common_tones_path]]/[[rite]]/[[fn]].gtex: [[common_tones_path]]/[[rite]]/[[fn]].gabc
+GTEX += [[common_tones_path]]/[[rite]]/[[fn]].gtex
+[% endfor %]
 
-GTEX += asperges.gtex
-[% endif %]
-[% if gloria %]
-[[masses_path]]/[[mass_setting]]/gloria.gtex: [[masses_path]]/[[mass_setting]]/gloria.gabc
-
-GTEX += [[masses_path]]/[[mass_setting]]/gloria.gtex
-[% endif %]
-[% if gradual %]
-gradual.gtex: gradual.gabc
-
-GTEX += gradual.gtex
-[% endif %]
-[% if alleluia == "alleluia" %]
-alleluia.gtex: alleluia.gabc
-
-GTEX += alleluia.gtex
-[% endif %]
-[% if alleluia == "tract" %]
-tract.gtex: tract.gabc
-
-GTEX += tract.gtex
-[% endif %]
 [% if marian %]
-marian.gtex: marian.gabc
-
-MARIAN_GTEX += marian.gtex
+[[marian_path]]/[[rite]]/[[marian_type]].gtex: [[marian_path]]/[[rite]]/[[marian_type]].gabc
+MARIAN += [[marian_path]]/[[rite]]/[[marian_type]].gtex
+MARIAN += [[marian_path]]/[[marian_type]]_resp.tex
 [% endif %]
 
 missalette.pdf: missalette.tex propers.tex styling.sty rubrics.sty titlepage.sty ${GTEX} ${MARIAN}

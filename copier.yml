@@ -97,6 +97,13 @@ masses_path:
     You might like to use StJosephsGateshead/Ordinaries for this.
   default: ../Ordinaries/masses
 
+common_tones_path:
+  type: str
+  help: >
+    Relative path from generated directory to the directory containing the common tones.
+    You might like to use StJosephsGateshead/ToniCommunes for this.
+  default: ../ToniCommunes
+
 repo_url:
   type: str
   help: Url for repository, if any.  Leave blank to suppress.
@@ -104,6 +111,24 @@ repo_url:
 marian:
   type: bool
   help: Include Marian Antiphon?
+
+marian_type:
+  type: str
+  help: Which of the Marian Antiphons to use?
+  choices:
+    Salve Regina: "salve-regina"
+    Alma Redemptoris Mater: "alma-redemptoris-mater"
+    Ave Regina Caelorum: "ave-regina-caelorum"
+    Regina Caeli: "regina-caeli"
+  when: "[[ marian ]]"
+
+marian_path:
+  type: str
+  help: >
+    Relative path from generated directory to the directory containing the Marian Antiphons.
+    You might like to use StJosephsGateshead/MarianAntiphons for this.
+  when: "[[ marian ]]"
+  default: ../MarianAntiphons
 
 img_file:
   type: str
