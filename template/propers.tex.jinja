@@ -85,13 +85,14 @@
 % File paths: we don't use symlinks as (a) not all platforms support them, and
 % (b) they don't fit nicely with the flow we're using.
 
-[% for fn in ["kyrie", "gloria", "sanctus", "agnus", "ite"] if fn %]
+[% if asperges %]\newcommand{\aspergesPath}{[[common_tones_path]]/[[rite]]/[[asperges]]}[% endif %]
+[% for fn in ["kyrie", "gloria" if gloria, "sanctus", "agnus", "ite"] if fn %]
 \newcommand{\[[fn]]Path}{[[masses_path]]/[[mass_setting]]/[[fn]]}
 [% endfor %]
 [% if creedp %]
 \newcommand{\creedPath}{[[creed_path]]/[[creed]]/credo}
 [% endif %]
-[% for fn in ["amen", asperges, "dominus-vobiscum", "pax-domini", "preface_" ~ preface, "sed-libera-nos", "sequenti"] if fn %]
+[% for fn in ["amen", "dominus-vobiscum", "pax-domini", "preface_" ~ preface, "sed-libera-nos", "sequenti"] %]
 \newcommand{\[[fn.split('_')[0]|title|replace('-', '')|replace(fn[0].upper(), fn[0])]]Path}{[[common_tones_path]]/[[rite]]/[[fn]]}
 [% endfor %]
 [% if marian %]
