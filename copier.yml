@@ -88,7 +88,7 @@ creed_path:
 
 mass_setting:
   type: int
-  help: which of the 16 (or 8) standard mass ordinaries to use?
+  help: which of the 18 (or 8) standard mass ordinaries to use?
 
 masses_path:
   type: str
