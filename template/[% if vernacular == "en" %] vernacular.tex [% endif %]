@@ -1,0 +1,17 @@
+\newcommand{\whenStart}{When the Celebrant reaches the altar:}
+\newcommand{\whenPostAsperges}{Immediately after the Asperges}
+\newcommand{\whenKyrie}{Immediately after the Introit:}
+\newcommand{\whenGloria}{Immediately after the Kyrie, intoned by the celebrant:}
+\newcommand{\thenLession}{The lesson is chanted:}
+\newcommand{\whenGradual}{After the Chanting of the lesson, or during the (secret) reading if so appointed:}
+\newcommand{\whenSequence}{Immediately after the gradual:}
+\newcommand{\whenGospel}{The choir sings the responses at the Holy Gospel:}
+\newcommand{\whenCreed}{The creed is sung:}
+\newcommand{\whenPreOffertory}{Just before the chanting of the Offertory:}
+\newcommand{\whenOffertory}{Immediately after the Celebrant chants the previous “Oremus”:}
+\newcommand{\thenMotet}{A motet or hymn may be sung here.}
+\newcommand{\whenSanctus}{Immediately after the Celebrant concludes the chanting of the Preface:}
+\newcommand{\whenPater}{The Celebrant alone chants the “Pater Noster.” The Choir sings the conclusion:}
+\newcommand{\whenAgnus}{Immediately after the ``Pax Domini'':}
+\newcommand{\whenCommunion}{Once the Celebrant begins to distribute Holy Communion:}
+\newcommand{\whenMarian}{At the conclusion of Mass the Marian antiphon proper to the season is sung:}

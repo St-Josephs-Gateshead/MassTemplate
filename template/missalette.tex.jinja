@@ -35,6 +35,7 @@
 \midsloppy
 
 \input{propers}
+\input{[[ vernacular ]]}
 
 \begin{document}
 \selectlanguage{latin}
@@ -43,7 +44,7 @@
 
 % [% if asperges %]
 \section{Asperges}
-\red{When the Celebrant reaches the altar:}
+\red{\whenStart}
 \gregorioscore{\aspergesPath}
 \black{
   \l{\v\ Osténde nobis, Dómine, misericórdiam tuam. [% if asperges == 'vidi-aquam' %]Alleluia[% endif %] }
@@ -71,30 +72,30 @@
 % [% if rite == 'dominican' %]
 \section{Officium}
 % [% if asperges %]
-\red{Immediately after the Asperges}
+\red{\whenPostAsperges}
 % [% else %]
-\red{When the Celebrant reaches the altar:}
+\red{whenStart}
 % [% endif %]
 \gregorioscore{introit}
 \oneColumnTranslation{\officeTranslation}
 % [% else %]
 \section{Introit}
 % [% if asperges %]
-\red{Immediately after the Asperges}
+\red{\whenPostAsperges}
 % [% else %]
-\red{When the Celebrant reaches the altar:}
+\red{whenStart}
 % [% endif %]
 \gregorioscore{introit}
 \oneColumnTranslation{\introitTranslation}
 % [% endif %]
 
 \section{Kyrie}
-\red{Immediately after the Introit:}
+\red{\whenKyrie}
 \gregorioscore{\kyriePath}
 
 % [% if gloria %]
 \section{Gloria}
-\red{Immediately after the Kyrie:}
+\red{\whenGloria}
 \gregorioscore{\gloriaPath}
 % [% endif %]
 
@@ -107,7 +108,7 @@
 \gregorioscore{\amenPath}
 
 \section{Lesson}
-\red{The lesson is chanted:}
+\red{\thenLesson}
 \black{\lesson}
 
 % [% if gradual %]
@@ -116,8 +117,7 @@
 % [% else %]
 \section{Gradual}
 % [% endif %]
-\red{After the Chanting of the lesson, or during the (secret) reading if
-  so appointed:}
+\red{\whenGradual}
 \gregorioscore{gradual}
 % [% else %]
 \section{Alleluia}
@@ -133,32 +133,33 @@
 
 % [% if sequentia %]
 \section{Sequence}
+\red{\whenSequence}
 \gregorioscore{sequentia}
 \oneColumnTranslation{\sequentiaTranslation}
 % [% endif %]
 
 \section{Gospel}
-\red{The choir sings the responses at the Holy Gospel:}
+\red{\whenGospel}
 \gregorioscore{\dominusVobiscumPath}
 \gregorioscore{\sequentiPath}
 \black{\gospel}
 
 % [% if creedp %]
 \section{Creed}
-\red{The creed is sung:}
+\red{\whenCreed}
 \gregorioscore{\creedPath}
 % [% endif %]
 
 \section{Response prior to the Offertory}
-\red{Just before the chanting of the Offertory:}
+\red{\whenPreOffertory}
 \gregorioscore{\dominusVobiscumPath}
 
 \section{Offertory}
-\red{Immediately after the Celebrant chants the previous “Oremus”:}
+\red{\whenOffertory}
 \gregorioscore{offertory}
 \oneColumnTranslation{\offertoryTranslation}
 
-\red{A motet or hymn may be sung here.}
+\red{\thenMotet}
 
 \section{Secret}
 \black{\secret}
@@ -167,29 +168,29 @@
 \gregorioscore{\prefacePath}
 
 \section{Sanctus and Benedictus}
-\red{Immediately after the Celebrant concludes the chanting of the Preface:}
+\red{\whenSanctus}
 \gregorioscore{\sanctusPath}
 
 \section{Amen at the end of the Canon of the Mass}
 \gregorioscore{\amenPath}
 
 \section{Pater Noster}
-\red{The Celebrant alone chants the “Pater Noster.” The Choir sings the conclusion:}
+\red{\whenPater}
 \gregorioscore{\sedLiberaNosPath}
 
 \section{Breaking of the Host}
 \gregorioscore{\paxDominiPath}
 
-
 \section{Agnus Dei}
+\red{\whenAgnus}
 \gregorioscore{\agnusPath}
 
 \section{Communion}
-\red{Once the Celebrant begins to distribute Holy Communion:}
+\red{\whenCommunion}
 \gregorioscore{communion}
 \oneColumnTranslation{\communionTranslation}
 
-\red{A motet or hymn may be sung here.}
+\red{\thenMotet}
 
 \section{Post-Communion Collect}
 \gregorioscore{\dominusVobiscumPath}
@@ -205,12 +206,12 @@
 
 % [% if marian %]
 \section{Marian Antiphon}
-\red{At the conclusion of Mass the Marian antiphon proper to the season is sung:}
+\red{\whenMarian}
 \gregorioscore{\marianPath}
 \marianResp
 % [% endif %]
 
-\red{A motet or hymn may follow.}
+\red{\thenMotet}
 \begin{center}
   \+
 \end{center}
