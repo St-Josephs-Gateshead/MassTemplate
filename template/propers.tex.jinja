@@ -1,8 +1,25 @@
-% This file defines the properties to be inserted into missalette.tex  In this way
+% This file defines the propers to be inserted into missalette.tex  In this way
 % multiple feasts can be typeset very quickly.  missalette.tex should not normally
 % need changing.  Note that this is not the most readable way to insert text
 % into a LaTeX document, but it is the most powerful: the macros defined here
 % are directly executed when building the document.
+
+
+\newcommand{\theFooter}{
+  \vspace*{\fill}
+  \begin{minipage}{1\textwidth}
+  Typeset by [[ creator_name ]] in ten-point Palatino.  Translations from the
+  Knox Bible, divinumofficium.com, the St. Dominic Missal, and my own.
+
+  % [% if repo_url %]
+  The latest version of this booklet can always be found at
+  \url{ [[repo_url]] }. Comments?
+  Suggestion? Found a mistake? Open an issue in the repository.
+  % [% endif %]
+
+  {\centering\footnotesize\texttt{Compositum \composeDate}\par}
+  \end{minipage}
+}
 
 % For the title page
 \newcommand{\feast}{ [[-feast_name-]] }
