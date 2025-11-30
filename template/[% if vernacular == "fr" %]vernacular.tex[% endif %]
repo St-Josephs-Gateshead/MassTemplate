@@ -1,20 +1,22 @@
-\newcommand{\whenStart}{Lorsque le Célébrant atteint l'Autel\ :}
-\newcommand{\whenPostAsperges}{Directement après l'Asperges\ :}
-\newcommand{\whenKyrie}{Directement après l'Introit\ :}
-\newcommand{\whenGloria}{Directement après le Kyrie, entonné par le Célébrant\ :}
-\newcommand{\whenGradual}{Après que le Célébrant ait chanté l'Épître\ :}
-\newcommand{\whenSequence}{Directement après le Graduel\ :}
-\newcommand{\whenGospel}{La chorale chante les réponses au Saint Évangile\ :}
-\newcommand{\whenCreed}{Après le sermon (le cas écheant) où aprés l'Évangile, entonné par le Célébrant\ :}
-\newcommand{\whenPreOffertory}{Juste avant de chanter l'Offertoire\ :}
-\newcommand{\whenOffertory}{Directement après que le Célébrant chante l' « Oremus » précédant\ :}
-\newcommand{\whenSanctus}{Directement après que le Célébrant à chanté le Preface\ :}
-\newcommand{\whenPater}{Le Célébrant chante le « Pater Noster » tout seul. La chorale chante la conclusion\ :}
 \newcommand{\whenAgnus}{Directement après le « Pax Domini »\ :}
-\newcommand{\whenCommunion}{Lorsque le Célébrant a commencé de distribuer le Sacrement\ :}
-\newcommand{\whenMarian}{Après ou pendant le Dernier Évangile suivant le coutume locale\ :}
+\newcommand{\whenCommunion}{Lorsque le Célébrant a commencé à distribuer le Sacrement\ :}
+\newcommand{\whenCreed}{Après le sermon (le cas échéant) où après l'Évangile, entonné par le Célébrant\ :}
+\newcommand{\whenGloria}{Directement après le Kyrie, entonné par le Célébrant\ :}
+\newcommand{\whenGospel}{La chorale chante les réponses au Saint Évangile\ :}
+\newcommand{\whenGradual}{Après que le Célébrant ait chanté l'Épître\ :}
+\newcommand{\whenKyrie}{Directement après l'Introit\ :}
+\newcommand{\whenMarian}{Après ou pendant le Dernier Évangile suivant la coutume locale\ :}
+\newcommand{\whenOffertory}{Directement après que le Célébrant chante l' « Oremus » précédant\ :}
+\newcommand{\whenPater}{Le Célébrant chante le « Pater Noster » tout seul. La chorale chante la conclusion\ :}
+\newcommand{\whenPostAsperges}{Directement après l'Asperges\ :}
+\newcommand{\whenPreOffertory}{Juste avant de chanter l'Offertoire\ :}
+\newcommand{\whenSanctus}{Directement après que le Célébrant a chanté le Preface\ :}
+\newcommand{\whenSequence}{Directement après le Graduel\ :}
+\newcommand{\whenStart}{Lorsque le Célébrant atteint l'Autel\ :}
 
-\newcommand{\thenMotet}{A motet or hymn may be sung here.}
+\newcommand{\thenLesson}{Le Célébrant chante l'Épître.}
+\newcommand{\thenMotet}{Un motet ou un hymne peut être chanté ici.}
+
 
 \newcommand{\trAmen}{Ainsi soit-il.}
 \newcommand{\trDeoGratias}{Nous rendons grâces à Dieu.}
@@ -22,26 +24,24 @@
 \newcommand{\trDominusVobsicum}{Le Seigneur soit avec vous.}
 \newcommand{\trEtClamor}{Et que ma vox aille jusqu'à vous\ !}
 \newcommand{\trEtCumSpirito}{Et avec votre esprit.}
+\newcommand{\trEtSalutare}{Et donnez-nous votre salut.}
 \newcommand{\trOremus}{Prions.}
-\newcommand{\trPerDominum}{Par notre Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trOstende}{Montrez-nous, Seigneur, * Votre miséricorde.}
 \newcommand{\trPerChristum}{Par notre Seigneur Jésus-Christ.}
+\newcommand{\trPerDominumEiusdem}{Par notre Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du même Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trPerDominum}{Par notre Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trPerEundemChristum}{Par le même Seigneur Jésus-Christ notre Seigneur.}
+\newcommand{\trPerEundem}{Par le même Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du même Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiCumPatre}{Par lui qui étant Dieu, vit et règne avec vous, en l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiTecumEiusdem}{Qui, étant Dieu,  vit et règne avec vous dans l’unité du même Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiTecumIn}{Qui, étant Dieu, vit et règne avec vous dans l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiTecum}{Qui, étant Dieu, vit et règne avec vous dans tous les siècles des siècles.}
 \newcommand{\trQuiVivis}{Vous qui étant Dieu, vivez et régnez dans l'unité du Saint-Esprit, Dieu, pour les siècles des siècles.}
 
-% TODO
-\newcommand{\trPerDominumEiusdem}{Through Jesus Christ, thy Son our Lord, Who liveth and reigneth with thee, in the unity of the same Holy Ghost, God, world without end.}
-\newcommand{\trPerEundemChristum}{Through the same Christ our Lord.}
-\newcommand{\trPerEundem}{Through the same Jesus Christ, thy Son, Our Lord, Who liveth and reigneth with thee in the unity of the Holy Ghost, God, world without end.}
-\newcommand{\trQuiCumPatre}{Who liveth and reigneth with the Father and the Holy Ghost, God, for ever and ever.}
-\newcommand{\trQuiTecumEiusdem}{Who with thee liveth and reigneth, in the unity of the same Holy Spirit, God, world without end.}
-\newcommand{\trQuiTecum}{Who with thee liveth and reigneth, world without end.}
-\newcommand{\trQuiTecumIn}{Who livest and reignest with God the Father, in the unity of the Holy Spirit, God, world without end.}
-
 \newcommand{\trExaudiNos}{%
-    Hear us, O holy Lord, almighty Father, everlasting God, and vouchsafe to
-    send Thy holy Angel from heaven, to guard, cherish, protect, visit and
-    defend all that are assembled in this place: through Christ our Lord.
+  Exaucez-nous, Seigneur, Père saint, Dieu éternel et tout-puissant\ ; et daignez
+  envoyer du ciel votre saint ange, afin qu’il garde et soutienne, qu’il
+  protège, visite et défende tous ceux qui se trouvent en ce lieu. Par le
+  Christ, notre Seigneur.
 }
 
-\newcommand{\trEtSalutare}{And grant us Thy salvation.}
-\newcommand{\thenLesson}{Le Célébrant chante l'Épître.}
-\newcommand{\trOstende}{O Lord, show Thy mercy upon us.}

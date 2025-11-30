@@ -1,23 +1,22 @@
-\newcommand{\whenStart}{When the Celebrant reaches the altar:}
-\newcommand{\whenPostAsperges}{Immediately after the Asperges:}
-\newcommand{\whenKyrie}{Immediately after the Introit:}
-\newcommand{\whenGloria}{Immediately after the Kyrie, intoned by the Celebrant:}
-\newcommand{\whenGradual}{After the Chanting of the lesson:}
-\newcommand{\whenSequence}{Immediately after the gradual:}
-\newcommand{\whenGospel}{The choir sings the responses at the Holy Gospel:}
-\newcommand{\whenCreed}{After the homily (if any), or after the Gospel, intoned by the Celebrant:}
-\newcommand{\whenPreOffertory}{Just before the chanting of the Offertory:}
-\newcommand{\whenOffertory}{Immediately after the Celebrant chants the previous ``Oremus'':}
-\newcommand{\whenSanctus}{Immediately after the Celebrant concludes the Preface:}
-\newcommand{\whenPater}{The Celebrant alone chants the ``Pater Noster.'' The Choir sings the conclusion:}
 \newcommand{\whenAgnus}{Immediately after the ``Pax Domini'':}
 \newcommand{\whenCommunion}{Once the Celebrant begins to distribute Holy Communion:}
+\newcommand{\whenCreed}{After the homily (if any), or after the Gospel, intoned by the Celebrant:}
+\newcommand{\whenGloria}{Immediately after the Kyrie, intoned by the Celebrant:}
+\newcommand{\whenGospel}{The choir sings the responses at the Holy Gospel:}
+\newcommand{\whenGradual}{After the Chanting of the lesson:}
+\newcommand{\whenKyrie}{Immediately after the Introit:}
 \newcommand{\whenMarian}{After or during the Last Gospel, depending on local custom:}
+\newcommand{\whenOffertory}{Immediately after the Celebrant chants the previous ``Oremus'':}
+\newcommand{\whenPater}{The Celebrant alone chants the ``Pater Noster.'' The Choir sings the conclusion:}
+\newcommand{\whenPostAsperges}{Immediately after the Asperges:}
+\newcommand{\whenPreOffertory}{Just before the chanting of the Offertory:}
+\newcommand{\whenSanctus}{Immediately after the Celebrant concludes the Preface:}
+\newcommand{\whenSequence}{Immediately after the gradual:}
+\newcommand{\whenStart}{When the Celebrant reaches the altar:}
 
-\newcommand{\thenMotet}{A motet or hymn may be sung here.}
 \newcommand{\thenLesson}{The lesson is chanted:}
+\newcommand{\thenMotet}{A motet or hymn may be sung here.}
 
-\newcommand{\trAmen}{Amen.}
 \newcommand{\trDeoGratias}{Thanks be to God.}
 \newcommand{\trDomineExaudi}{O Lord, hear my prayer.}
 \newcommand{\trDominusVobsicum}{The Lord be with you.}
@@ -25,6 +24,7 @@
 \newcommand{\trEtCumSpirito}{And with Thy spirit.}
 \newcommand{\trEtSalutare}{And grant us Thy salvation.}
 \newcommand{\trOremus}{Let us pray.}
+\newcommand{\trOstende}{Montrez-nous, Seigneur, * Votre miséricorde.}
 \newcommand{\trOstende}{O Lord, show Thy mercy upon us.}
 \newcommand{\trPerChristum}{Through Jesus Christ our Lord.}
 \newcommand{\trPerDominumEiusdem}{Through Jesus Christ, thy Son our Lord, Who liveth and reigneth with thee, in the unity of the same Holy Ghost, God, world without end.}
@@ -33,8 +33,8 @@
 \newcommand{\trPerEundem}{Through the same Jesus Christ, thy Son, Our Lord, Who liveth and reigneth with thee in the unity of the Holy Ghost, God, world without end.}
 \newcommand{\trQuiCumPatre}{Who liveth and reigneth with the Father and the Holy Ghost, God, for ever and ever.}
 \newcommand{\trQuiTecumEiusdem}{Who with thee liveth and reigneth, in the unity of the same Holy Spirit, God, world without end.}
-\newcommand{\trQuiTecum}{Who with thee liveth and reigneth, world without end.}
 \newcommand{\trQuiTecumIn}{Who livest and reignest with God the Father, in the unity of the Holy Spirit, God, world without end.}
+\newcommand{\trQuiTecum}{Who with thee liveth and reigneth, world without end.}
 \newcommand{\trQuiVivis}{Who livest and reignest with God the Father in the unity of the Holy Spirit, God, world without end.}
 
 \newcommand{\trExaudiNos}{%
