@@ -75,7 +75,7 @@
 \gregorioscore{introit}
 \oneColumnTranslation{\officeTranslation}
 % [% else %]
-\section{Introit}
+\section{Introitus}
 % [% if asperges %]
 \red{\whenPostAsperges}
 % [% else %]
@@ -95,7 +95,7 @@
 \gregorioscore{\gloriaPath}
 % [% endif %]
 
-\section{Collect}
+\section{Oratio}
 \gregorioscore{\dominusVobiscumPath}
 \black{
   \oremus
@@ -103,15 +103,15 @@
 }
 \gregorioscore{\amenPath}
 
-\section{Lesson}
+\section{Lectio}
 \red{\thenLesson}
 \black{\lesson}
 
 % [% if gradual %]
 % [% if rite == 'dominican' %]
-\section{Responsory}
+\section{Responsorium}
 % [% else %]
-\section{Gradual}
+\section{Graduale}
 % [% endif %]
 \red{\whenGradual}
 \gregorioscore{gradual}
@@ -128,67 +128,67 @@
 % [% endif %]
 
 % [% if sequentia %]
-\section{Sequence}
+\section{Sequentia}
 \red{\whenSequence}
 \gregorioscore{sequentia}
 \oneColumnTranslation{\sequentiaTranslation}
 % [% endif %]
 
-\section{Gospel}
+\section{Evangelium}
 \red{\whenGospel}
 \gregorioscore{\dominusVobiscumPath}
 \gregorioscore{\sequentiPath}
 \black{\gospel}
 
 % [% if creedp %]
-\section{Creed}
+\section{Credo}
 \red{\whenCreed}
 \gregorioscore{\creedPath}
 % [% endif %]
 
-\section{Response prior to the Offertory}
+\section{Ante Offertorium}
 \red{\whenPreOffertory}
 \gregorioscore{\dominusVobiscumPath}
 
-\section{Offertory}
+\section{Offertorium}
 \red{\whenOffertory}
 \gregorioscore{offertory}
 \oneColumnTranslation{\offertoryTranslation}
 
 \red{\thenMotet}
 
-\section{Secret}
+\section{Secreta}
 \black{\secret}
 
-\section{Responses at the Preface}
+\section{Præfatio}
 \gregorioscore{\prefacePath}
 
-\section{Sanctus and Benedictus}
+\section{Sanctus et Benedictus}
 \red{\whenSanctus}
 \gregorioscore{\sanctusPath}
 
-\section{Amen at the end of the Canon of the Mass}
+\section{Amen}
 \gregorioscore{\amenPath}
 
 \section{Pater Noster}
 \red{\whenPater}
 \gregorioscore{\sedLiberaNosPath}
 
-\section{Breaking of the Host}
+\section{Pax Domini}
 \gregorioscore{\paxDominiPath}
 
 \section{Agnus Dei}
 \red{\whenAgnus}
 \gregorioscore{\agnusPath}
 
-\section{Communion}
+\section{Communio}
 \red{\whenCommunion}
 \gregorioscore{communion}
 \oneColumnTranslation{\communionTranslation}
 
 \red{\thenMotet}
 
-\section{Post-Communion Collect}
+\section{Postcommunio}
 \gregorioscore{\dominusVobiscumPath}
 \black{
   \oremus
@@ -196,12 +196,12 @@
 }
 \gregorioscore{\amenPath}
 
-\section{Dismissal}
+\section{Conclusio}
 \gregorioscore{\dominusVobiscumPath}
 \gregorioscore{\itePath}
 
 % [% if marian %]
-\section{Marian Antiphon}
+\section{Antiphona BMV}
 \red{\whenMarian}
 \gregorioscore{\marianPath}
 \marianResp
