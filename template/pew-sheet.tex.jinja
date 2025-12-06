@@ -29,6 +29,7 @@
 \begin{document}
 
 \input{propers}
+\input{vernacular}
 
 \begin{center}
   {\LARGE \masstype}
@@ -41,79 +42,79 @@
 \end{center}
 
 % [% if rite == 'dominican' %]
-\section{Office}
+\section{Officium}
 \black{
   \l{\office}
   \e{\officeTranslation}
 }
 % [% else %]
-\section{Introit}
+\section{Introitus}
 \black{
   \l{\introit}
   \e{\introitTranslation}
 }
 % [% endif %]
 
-\section{Collect}
+\section{Oratio}
 \black{\collect}
 
 \section{Lesson}
 \black{\lesson}
 
 % [% if rite == 'dominican' %]
-\section{Responsory}
+\section{Responsorium}
 \black{
   \l{\responsory}
   \e{\responsoryTranslation}
 }
 % [% else %]
-\section{Gradual}
+\section{Graduale}
 \black{
   \l{\gradual}
   \e{\gradualTranslation}
 }
 % [% endif %]
 % [% if sequentia %]
-\section{Sequence}
+\section{Sequentia}
 \black{
   \l{\sequentia}
   \e{\sequentiaTranslation}
 }
 % [% endif %]
 
-\section{Gospel}
+\section{Evangelium}
 \black{\gospel}
 
-\section{Offertory}
+\section{Offertorio}
 \black{
   \l{\offertory}
   \e{\offertoryTranslation}
 }
 
-\section{Communion}
+\section{Communio}
 \black{
   \l{\communion}
   \e{\communionTranslation}
 }
 
-\section{Post Communion}
+\section{Postcommunio}
 \black{\postcommunion}
 
 % [% if marian %]
-\section{Marian Antiphon}
-\red{At the conclusion of Mass the Marian antiphon proper to the season is sung:}
+\section{Antiphona BMV}
+\red{\whenMarian}
 \gregorioscore{\marianPath}
 \marianResp
 % [% endif %]
 
 \vfill
-\red{A motet or hymn may follow.}
+\red{\thenMotet}
 \begin{center}
   \+
 \end{center}
 
 
-\printFoot
+\theFooter
 
 \end{document}
 

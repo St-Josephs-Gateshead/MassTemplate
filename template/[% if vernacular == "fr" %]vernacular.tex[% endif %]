@@ -1,0 +1,47 @@
+\newcommand{\whenAgnus}{Directement après le « Pax Domini »\ :}
+\newcommand{\whenCommunion}{Lorsque le Célébrant a commencé à distribuer le Sacrement\ :}
+\newcommand{\whenCreed}{Après le sermon (le cas échéant) où après l'Évangile, entonné par le Célébrant\ :}
+\newcommand{\whenGloria}{Directement après le Kyrie, entonné par le Célébrant\ :}
+\newcommand{\whenGospel}{La chorale chante les réponses au Saint Évangile\ :}
+\newcommand{\whenGradual}{Après que le Célébrant ait chanté l'Épître\ :}
+\newcommand{\whenKyrie}{Directement après l'Introit\ :}
+\newcommand{\whenMarian}{Après ou pendant le Dernier Évangile suivant la coutume locale\ :}
+\newcommand{\whenOffertory}{Directement après que le Célébrant chante l' « Oremus » précédant\ :}
+\newcommand{\whenPater}{Le Célébrant chante le « Pater Noster » tout seul. La chorale chante la conclusion\ :}
+\newcommand{\whenPostAsperges}{Directement après l'Asperges\ :}
+\newcommand{\whenPreOffertory}{Juste avant de chanter l'Offertoire\ :}
+\newcommand{\whenSanctus}{Directement après que le Célébrant a chanté le Preface\ :}
+\newcommand{\whenSequence}{Directement après le Graduel\ :}
+\newcommand{\whenStart}{Lorsque le Célébrant atteint l'Autel\ :}
+
+\newcommand{\thenLesson}{Le Célébrant chante l'Épître.}
+\newcommand{\thenMotet}{Un motet ou un hymne peut être chanté ici.}
+
+
+\newcommand{\trAmen}{Ainsi soit-il.}
+\newcommand{\trDeoGratias}{Nous rendons grâces à Dieu.}
+\newcommand{\trDomineExaudi}{Seigneur, exaucez ma prière.}
+\newcommand{\trDominusVobsicum}{Le Seigneur soit avec vous.}
+\newcommand{\trEtClamor}{Et que ma vox aille jusqu'à vous\ !}
+\newcommand{\trEtCumSpirito}{Et avec votre esprit.}
+\newcommand{\trEtSalutare}{Et donnez-nous votre salut.}
+\newcommand{\trOremus}{Prions.}
+\newcommand{\trOstende}{Montrez-nous, Seigneur, * Votre miséricorde.}
+\newcommand{\trPerChristum}{Par notre Seigneur Jésus-Christ.}
+\newcommand{\trPerDominumEiusdem}{Par notre Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du même Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trPerDominum}{Par notre Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trPerEundemChristum}{Par le même Seigneur Jésus-Christ notre Seigneur.}
+\newcommand{\trPerEundem}{Par le même Seigneur Jésus-Christ, votre Fils, qui, étant Dieu, vit et règne avec vous, en l’unité du même Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiCumPatre}{Par lui qui étant Dieu, vit et règne avec vous, en l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiTecumEiusdem}{Qui, étant Dieu,  vit et règne avec vous dans l’unité du même Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiTecumIn}{Qui, étant Dieu, vit et règne avec vous dans l’unité du Saint-Esprit, dans tous les siècles des siècles.}
+\newcommand{\trQuiTecum}{Qui, étant Dieu, vit et règne avec vous dans tous les siècles des siècles.}
+\newcommand{\trQuiVivis}{Vous qui étant Dieu, vivez et régnez dans l'unité du Saint-Esprit, Dieu, pour les siècles des siècles.}
+
+\newcommand{\trExaudiNos}{%
+  Exaucez-nous, Seigneur, Père saint, Dieu éternel et tout-puissant\ ; et daignez
+  envoyer du ciel votre saint ange, afin qu’il garde et soutienne, qu’il
+  protège, visite et défende tous ceux qui se trouvent en ce lieu. Par le
+  Christ, notre Seigneur.
+}
+

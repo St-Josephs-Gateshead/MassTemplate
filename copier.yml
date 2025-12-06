@@ -1,3 +1,11 @@
+vernacular:
+  type: str
+  help: Which language should be used as the vernacular?
+  choices:
+    - en
+    - fr
+  default: en
+
 rite:
   type: str
   help: Which rite is this Mass in?
